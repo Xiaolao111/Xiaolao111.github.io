@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>数字信号处理知识点梳理_1</title>
+    <link href="/2024/02/16/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E7%9F%A5%E8%AF%86%E7%82%B9%E6%A2%B3%E7%90%86/"/>
+    <url>/2024/02/16/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E7%9F%A5%E8%AF%86%E7%82%B9%E6%A2%B3%E7%90%86/</url>
+    
+    <content type="html"><![CDATA[<h1 id="数字信号处理-知识点回顾"><a href="#数字信号处理-知识点回顾" class="headerlink" title="数字信号处理 知识点回顾"></a>数字信号处理 知识点回顾</h1><h2 id="理论基础"><a href="#理论基础" class="headerlink" title="理论基础"></a>理论基础</h2><p><strong>LTI</strong>（线性时不变系统）和<strong>DSP</strong><br>LTI的特征：</p><ol><li>线性（可叠加 齐次）</li><li>时不变</li><li>因果</li><li>稳定</li><li>可逆 <br /></li></ol><p>LTI的描述：线性常系数差分方程</p><h2 id="重要结论"><a href="#重要结论" class="headerlink" title="重要结论"></a>重要结论</h2><h3 id="1、FTS-FT"><a href="#1、FTS-FT" class="headerlink" title="1、FTS(FT)"></a>1、FTS(FT)</h3><p><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT.jpg#pic_center" alt="通用的离散信号傅里叶变换形式"><br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/IFT.jpg#pic_center" alt="通用的反变换"></p><p>实序列的傅里叶FT是共轭对称的，其模是偶函数，相位是奇函数</p><h3 id="2、Z变换"><a href="#2、Z变换" class="headerlink" title="2、Z变换"></a>2、Z变换</h3><p>序列的傅里叶变换要求绝对可和，那么，对于在傅里叶变化中无法绝对可和的序列，提供了Z变换，Z变换相当于是给原信号进行指数加权后的傅里叶变换，然后在z平面的一定范围内Z变换能够绝对可和<br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/Z.jpg#pic_center" alt="Z变换"><br>可知z为复数，z平面为复数平面，序列的收敛z域往往是一个圆的内部或外部或圆环（两个序列相加时），可知当半径为1的圆环在收敛z域内部时，序列的傅里叶变换存在<br>有时需要求Z变换的反变换，即由Z变换结果和收敛域反推原序列（收敛域必不可少）<br><strong>Z变换和傅里叶变换，是信号处理中处理有限长序列的重要途径</strong></p><h3 id="3、傅里叶变换的几种形式"><a href="#3、傅里叶变换的几种形式" class="headerlink" title="3、傅里叶变换的几种形式"></a>3、傅里叶变换的几种形式</h3><style>.center {  width: auto;  display: table;  margin-left: auto;  margin-right: auto;}</style><div class="center"><table><thead><tr><th>时域</th><th>频域</th></tr></thead><tbody><tr><td>连续</td><td>非周期</td></tr><tr><td>离散</td><td>周期</td></tr><tr><td>非周期</td><td>连续</td></tr><tr><td>周期</td><td>离散</td></tr></tbody></table></div><p><strong>连续时间、连续频率</strong><br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT1.jpg#pic_center"><br>这里时域和频率都为连续非周期<br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT1_img.jpg#pic_center"><br><strong>连续时间、离散频率（傅里叶级数）</strong><br>连续周期信号可以展开为傅里叶级数的形式，特征是离散非周期<br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT2.jpg#pic_center"><br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT2_img.jpg#pic_center"><br><strong>离散时间，连续频率</strong><br>这里时域为离散非周期，频域为连续周期<br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT3.jpg#pic_center"><br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT3_img.jpg#pic_center"></p><p><strong>离散时间、离散频域（离散傅里叶级数）</strong><br>上述三种情况，都存在至少一个域为连续的，这种信号并不适合计算机处理，那么就有了离散周期信号，对应的频域也为离散周期<br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT4.jpg#pic_center"><br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT4_img.jpg#pic_center"></p><h3 id="4、离散傅里叶级数（DFS）"><a href="#4、离散傅里叶级数（DFS）" class="headerlink" title="4、离散傅里叶级数（DFS）"></a>4、离散傅里叶级数（DFS）</h3><p><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/DFS.jpg#pic_center" alt="DFS和IDFS"></p><h3 id="5、有限长序列的离散傅里叶变换（DFT）"><a href="#5、有限长序列的离散傅里叶变换（DFT）" class="headerlink" title="5、有限长序列的离散傅里叶变换（DFT）"></a>5、有限长序列的离散傅里叶变换（DFT）</h3><p>其实就是DFS的时域和频域取主值<br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/DFT.jpg#pic_center" alt="DFT和IDFT"></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>FFT,DFT,数字信号处理,傅里叶变换</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>hexo框架使用</title>
     <link href="/2024/01/25/hexo%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/"/>
     <url>/2024/01/25/hexo%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/</url>

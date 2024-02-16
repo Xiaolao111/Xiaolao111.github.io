@@ -16,21 +16,36 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="​Hexo安装：（主要参考了以下文章）Hexo-零基础搭建个人博客(详解)_hexo博客-CSDN博客 hexo史上最全搭建教程-CSDN博客 khexo+gitee(码云)搭建个人博客避开所有坑_hexo搭建博客优缺点-CSDN博客​​​​​​​k Hexo可以选择部署到github或者gitee，我个人选择gitee  关于Markdown，我也不会写，在CSDN上写好再转成Markdown格">
+    <meta name="description" content="数字信号处理 知识点回顾理论基础LTI（线性时不变系统）和DSPLTI的特征：  线性（可叠加 齐次） 时不变 因果 稳定 可逆   LTI的描述：线性常系数差分方程 重要结论1、FTS(FT) 实序列的傅里叶FT是共轭对称的，其模是偶函数，相位是奇函数 2、Z变换序列的傅里叶变换要求绝对可和，那么，对于在傅里叶变化中无法绝对可和的序列，提供了Z变换，Z变换相当于是给原信号进行指数加权后的傅里叶变">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo框架使用">
-<meta property="og:url" content="http://example.com/2024/01/25/hexo%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="数字信号处理知识点梳理_1">
+<meta property="og:url" content="http://example.com/2024/02/16/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E7%9F%A5%E8%AF%86%E7%82%B9%E6%A2%B3%E7%90%86/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="​Hexo安装：（主要参考了以下文章）Hexo-零基础搭建个人博客(详解)_hexo博客-CSDN博客 hexo史上最全搭建教程-CSDN博客 khexo+gitee(码云)搭建个人博客避开所有坑_hexo搭建博客优缺点-CSDN博客​​​​​​​k Hexo可以选择部署到github或者gitee，我个人选择gitee  关于Markdown，我也不会写，在CSDN上写好再转成Markdown格">
+<meta property="og:description" content="数字信号处理 知识点回顾理论基础LTI（线性时不变系统）和DSPLTI的特征：  线性（可叠加 齐次） 时不变 因果 稳定 可逆   LTI的描述：线性常系数差分方程 重要结论1、FTS(FT) 实序列的傅里叶FT是共轭对称的，其模是偶函数，相位是奇函数 2、Z变换序列的傅里叶变换要求绝对可和，那么，对于在傅里叶变化中无法绝对可和的序列，提供了Z变换，Z变换相当于是给原信号进行指数加权后的傅里叶变">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-25T06:16:10.000Z">
-<meta property="article:modified_time" content="2024-01-29T07:03:03.262Z">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT.jpg#pic_center">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/IFT.jpg#pic_center">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/Z.jpg#pic_center">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT1.jpg#pic_center">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT1_img.jpg#pic_center">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT2.jpg#pic_center">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT2_img.jpg#pic_center">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT3.jpg#pic_center">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT3_img.jpg#pic_center">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT4.jpg#pic_center">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT4_img.jpg#pic_center">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/DFS.jpg#pic_center">
+<meta property="og:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/DFT.jpg#pic_center">
+<meta property="article:published_time" content="2024-02-16T07:06:15.000Z">
+<meta property="article:modified_time" content="2024-02-16T08:32:59.060Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="FFT,DFT,数字信号处理,傅里叶变换">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT.jpg#pic_center">
   
   
   
-  <title>hexo框架使用 - Hexo</title>
+  <title>数字信号处理知识点梳理_1 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +211,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="hexo框架使用"></span>
+            <span id="subtitle" data-typed-text="数字信号处理知识点梳理_1"></span>
           
         </div>
 
@@ -207,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-25 14:16" pubdate>
-          2024年1月25日 下午
+        <time datetime="2024-02-16 15:06" pubdate>
+          2024年2月16日 下午
         </time>
       </span>
     
@@ -219,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          230 字
+          546 字
         
       </span>
     
@@ -230,7 +245,7 @@
         
         
         
-          2 分钟
+          5 分钟
         
       </span>
     
@@ -267,25 +282,65 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">hexo框架使用</h1>
+            <h1 id="seo-header">数字信号处理知识点梳理_1</h1>
             
             
               <div class="markdown-body">
                 
-                <p>​<br>Hexo安装：（主要参考了以下文章）<br>Hexo-零基础搭建个人博客(详解)_hexo博客-CSDN博客</p>
-<p>hexo史上最全搭建教程-CSDN博客</p>
-<p>khexo+gitee(码云)搭建个人博客避开所有坑_hexo搭建博客优缺点-CSDN博客​​​​​​​k</p>
-<p>Hexo可以选择部署到github或者gitee，我个人选择gitee</p>
-<p> 关于Markdown，我也不会写，在CSDN上写好再转成Markdown格式还是很方便的，哈哈哈 </p>
-<p> 安装Fluid主题（主要参考了以下博客）<br>基于Hexo+Fluid搭建专属的个人博客网站 - 知乎 (zhihu.com)</p>
-<p>【hexo】学习篇（二）| hexo博客功能完善 - (￣︶￣*)) (guoguo.host)</p>
-<p>搭配 Fluid 如何优雅的写一篇文章 - Hexo Theme Fluid (fluid-dev.com) </p>
-<p>还包括fluid的github仓库：</p>
-<p> <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-fluid-blog">https://github.com/fluid-dev/hexo-fluid-blog</a></p>
-<p>fluid的官方使用手册：</p>
-<p><a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/">https://hexo.fluid-dev.com/</a></p>
-<p>借助leancloud实现评论区功能，看这一篇就够啦：</p>
-<p>【个人博客】Hexo 集成 Valine 评论功能_leancloud hexo valine-CSDN博客</p>
+                <h1 id="数字信号处理-知识点回顾"><a href="#数字信号处理-知识点回顾" class="headerlink" title="数字信号处理 知识点回顾"></a>数字信号处理 知识点回顾</h1><h2 id="理论基础"><a href="#理论基础" class="headerlink" title="理论基础"></a>理论基础</h2><p><strong>LTI</strong>（线性时不变系统）和<strong>DSP</strong><br>LTI的特征：</p>
+<ol>
+<li>线性（可叠加 齐次）</li>
+<li>时不变</li>
+<li>因果</li>
+<li>稳定</li>
+<li>可逆 <br /></li>
+</ol>
+<p>LTI的描述：线性常系数差分方程</p>
+<h2 id="重要结论"><a href="#重要结论" class="headerlink" title="重要结论"></a>重要结论</h2><h3 id="1、FTS-FT"><a href="#1、FTS-FT" class="headerlink" title="1、FTS(FT)"></a>1、FTS(FT)</h3><p><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT.jpg#pic_center" srcset="/img/loading.gif" lazyload alt="通用的离散信号傅里叶变换形式"><br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/IFT.jpg#pic_center" srcset="/img/loading.gif" lazyload alt="通用的反变换"></p>
+<p>实序列的傅里叶FT是共轭对称的，其模是偶函数，相位是奇函数</p>
+<h3 id="2、Z变换"><a href="#2、Z变换" class="headerlink" title="2、Z变换"></a>2、Z变换</h3><p>序列的傅里叶变换要求绝对可和，那么，对于在傅里叶变化中无法绝对可和的序列，提供了Z变换，Z变换相当于是给原信号进行指数加权后的傅里叶变换，然后在z平面的一定范围内Z变换能够绝对可和<br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/Z.jpg#pic_center" srcset="/img/loading.gif" lazyload alt="Z变换"><br>可知z为复数，z平面为复数平面，序列的收敛z域往往是一个圆的内部或外部或圆环（两个序列相加时），可知当半径为1的圆环在收敛z域内部时，序列的傅里叶变换存在<br>有时需要求Z变换的反变换，即由Z变换结果和收敛域反推原序列（收敛域必不可少）<br><strong>Z变换和傅里叶变换，是信号处理中处理有限长序列的重要途径</strong></p>
+<h3 id="3、傅里叶变换的几种形式"><a href="#3、傅里叶变换的几种形式" class="headerlink" title="3、傅里叶变换的几种形式"></a>3、傅里叶变换的几种形式</h3><style>
+.center 
+{
+  width: auto;
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="center">
+
+<table>
+<thead>
+<tr>
+<th>时域</th>
+<th>频域</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>连续</td>
+<td>非周期</td>
+</tr>
+<tr>
+<td>离散</td>
+<td>周期</td>
+</tr>
+<tr>
+<td>非周期</td>
+<td>连续</td>
+</tr>
+<tr>
+<td>周期</td>
+<td>离散</td>
+</tr>
+</tbody></table>
+</div>
+
+
+<p><strong>连续时间、连续频率</strong><br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT1.jpg#pic_center" srcset="/img/loading.gif" lazyload><br>这里时域和频率都为连续非周期<br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT1_img.jpg#pic_center" srcset="/img/loading.gif" lazyload><br><strong>连续时间、离散频率（傅里叶级数）</strong><br>连续周期信号可以展开为傅里叶级数的形式，特征是离散非周期<br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT2.jpg#pic_center" srcset="/img/loading.gif" lazyload><br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT2_img.jpg#pic_center" srcset="/img/loading.gif" lazyload><br><strong>离散时间，连续频率</strong><br>这里时域为离散非周期，频域为连续周期<br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT3.jpg#pic_center" srcset="/img/loading.gif" lazyload><br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT3_img.jpg#pic_center" srcset="/img/loading.gif" lazyload></p>
+<p><strong>离散时间、离散频域（离散傅里叶级数）</strong><br>上述三种情况，都存在至少一个域为连续的，这种信号并不适合计算机处理，那么就有了离散周期信号，对应的频域也为离散周期<br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT4.jpg#pic_center" srcset="/img/loading.gif" lazyload><br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/FT4_img.jpg#pic_center" srcset="/img/loading.gif" lazyload></p>
+<h3 id="4、离散傅里叶级数（DFS）"><a href="#4、离散傅里叶级数（DFS）" class="headerlink" title="4、离散傅里叶级数（DFS）"></a>4、离散傅里叶级数（DFS）</h3><p><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/DFS.jpg#pic_center" srcset="/img/loading.gif" lazyload alt="DFS和IDFS"></p>
+<h3 id="5、有限长序列的离散傅里叶变换（DFT）"><a href="#5、有限长序列的离散傅里叶变换（DFT）" class="headerlink" title="5、有限长序列的离散傅里叶变换（DFT）"></a>5、有限长序列的离散傅里叶变换（DFT）</h3><p>其实就是DFS的时域和频域取主值<br><img src="/img/post_%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%861/DFT.jpg#pic_center" srcset="/img/loading.gif" lazyload alt="DFT和IDFT"></p>
 
                 
               </div>
@@ -295,6 +350,13 @@
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/FFT-DFT-%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" class="print-no-link">#FFT,DFT,数字信号处理,傅里叶变换</a>
+      
+    </div>
+  
 </div>
 
 
@@ -303,8 +365,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>hexo框架使用</div>
-      <div>http://example.com/2024/01/25/hexo框架使用/</div>
+      <div>数字信号处理知识点梳理_1</div>
+      <div>http://example.com/2024/02/16/数字信号处理知识点梳理/</div>
     </div>
     <div class="license-meta">
       
@@ -316,7 +378,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月25日</div>
+          <div>2024年2月16日</div>
         </div>
       
       
@@ -348,18 +410,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/02/16/%E6%95%B0%E5%AD%97%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86%E7%9F%A5%E8%AF%86%E7%82%B9%E6%A2%B3%E7%90%86/" title="数字信号处理知识点梳理_1">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数字信号处理知识点梳理_1</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/01/23/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2024/01/25/hexo%E6%A1%86%E6%9E%B6%E4%BD%BF%E7%94%A8/" title="hexo框架使用">
+                        <span class="hidden-mobile">hexo框架使用</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
