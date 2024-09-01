@@ -19,26 +19,29 @@
   <meta name="author" content="xiaolao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="本文是我在项目过程中，对振动加速度数据的阶次分析的一些理解 频谱分析 原理 在不考虑数据滤波的情况下，频谱分析为时域数据作FFT的结果，其中纵轴为振动幅度（常见单位有g，mm&#x2F;s2等），横轴为频率，其中，能够采集到的最大频率为Fmax，频谱分辨率为Fn，采样率为Fs，采样点数为N \[ F_{max}&#x3D;\frac{Fs}{2},     F_n&#x3D;\frac{Fs}{N} \] 示例：">
+    <meta name="description" content="这次逛展和去年相比，最大的变化是自己的知识面更宽了，所以参观的时候更有针对性，能聊的也更多。简单总结一下看到的企业和产品吧 冠标 这家公司是一个国外传感器公司ENDEVCO的代理，传感器的种类很多，他们专门介绍了一个距离传感器，精确度是微秒级的，而且有数字量通信，还有带数显的液压传感器，感觉很酷   横河 主要看了一个示波器，这个示波器有一个很神奇的功能，就是能解析特定协议的波形，比如C">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对阶次分析的一些理解">
-<meta property="og:url" content="http://example.com/2024/08/30/understanding-of-order-analysis/index.html">
+<meta property="og:title" content="上海 test expo 观展记录">
+<meta property="og:url" content="http://example.com/2024/09/01/2024/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="本文是我在项目过程中，对振动加速度数据的阶次分析的一些理解 频谱分析 原理 在不考虑数据滤波的情况下，频谱分析为时域数据作FFT的结果，其中纵轴为振动幅度（常见单位有g，mm&#x2F;s2等），横轴为频率，其中，能够采集到的最大频率为Fmax，频谱分辨率为Fn，采样率为Fs，采样点数为N \[ F_{max}&#x3D;\frac{Fs}{2},     F_n&#x3D;\frac{Fs}{N} \] 示例：">
+<meta property="og:description" content="这次逛展和去年相比，最大的变化是自己的知识面更宽了，所以参观的时候更有针对性，能聊的也更多。简单总结一下看到的企业和产品吧 冠标 这家公司是一个国外传感器公司ENDEVCO的代理，传感器的种类很多，他们专门介绍了一个距离传感器，精确度是微秒级的，而且有数字量通信，还有带数显的液压传感器，感觉很酷   横河 主要看了一个示波器，这个示波器有一个很神奇的功能，就是能解析特定协议的波形，比如C">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/blog_order/Figure_1.png">
-<meta property="og:image" content="http://example.com/img/blog_order/Figure_3.png">
-<meta property="article:published_time" content="2024-08-30T06:48:42.000Z">
-<meta property="article:modified_time" content="2024-08-30T08:04:48.827Z">
+<meta property="og:image" content="http://example.com/img/blog_testexpo/Fig_1.jpg">
+<meta property="og:image" content="http://example.com/img/blog_testexpo/Fig_3.jpg">
+<meta property="og:image" content="http://example.com/img/blog_testexpo/Fig_5.jpg">
+<meta property="og:image" content="http://example.com/img/blog_testexpo/Fig_7.jpg">
+<meta property="og:image" content="http://example.com/img/blog_testexpo/Fig_9.jpg">
+<meta property="og:image" content="http://example.com/img/blog_testexpo/Fig_10.jpg">
+<meta property="og:image" content="http://example.com/img/blog_testexpo/Fig_12.jpg">
+<meta property="article:published_time" content="2024-09-01T15:35:18.000Z">
+<meta property="article:modified_time" content="2024-09-01T15:46:33.518Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="FFT">
-<meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/blog_order/Figure_1.png">
+<meta name="twitter:image" content="http://example.com/img/blog_testexpo/Fig_1.jpg">
   
   
   
-  <title>对阶次分析的一些理解 - Hexo</title>
+  <title>上海 test expo 观展记录 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -204,7 +207,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="对阶次分析的一些理解"></span>
+            <span id="subtitle" data-typed-text="上海 test expo 观展记录"></span>
           
         </div>
 
@@ -220,8 +223,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-08-30 14:48" pubdate>
-          2024年8月30日 下午
+        <time datetime="2024-09-01 23:35" pubdate>
+          2024年9月1日 晚上
         </time>
       </span>
     
@@ -232,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.4k 字
+          800 字
         
       </span>
     
@@ -243,7 +246,7 @@
         
         
         
-          12 分钟
+          7 分钟
         
       </span>
     
@@ -280,51 +283,39 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">对阶次分析的一些理解</h1>
+            <h1 id="seo-header">上海 test expo 观展记录</h1>
             
             
               <div class="markdown-body">
                 
-                <p>本文是我在项目过程中，对振动加速度数据的阶次分析的一些理解</p>
-<h1 id="频谱分析">频谱分析</h1>
-<h2 id="原理">原理</h2>
-<p>在不考虑数据滤波的情况下，频谱分析为时域数据作FFT的结果，其中纵轴为振动幅度（常见单位有g，mm/s<sup>2</sup>等），横轴为频率，其中，能够采集到的最大频率为F<sub>max</sub>，频谱分辨率为F<sub>n</sub>，采样率为F<sub>s</sub>，采样点数为N
-<span class="math display">\[
-F_{max}=\frac{Fs}{2},     F_n=\frac{Fs}{N}
-\]</span> 示例： <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs pgsql">Fs = <span class="hljs-number">1024</span><br>Fb = <span class="hljs-number">10</span><br>x = np.arange(<span class="hljs-number">0</span>, <span class="hljs-number">1024</span>)<br>t = x / Fb<br>data_len = <span class="hljs-number">1024</span><br>y = np.sin(<span class="hljs-number">2</span> * np.pi * x / Fs * Fb)<br>fft_y = np.fft.fft(y)<br>fft_y = (np.abs(fft_y) / data_len)[range(<span class="hljs-type">int</span>(data_len / <span class="hljs-number">2</span>))] * <span class="hljs-number">2</span><br>fft_y[<span class="hljs-number">0</span>] = fft_y[<span class="hljs-number">0</span>] / <span class="hljs-number">2</span><br>fig, ax = plt.subplots(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>)<br>line_0 = ax[<span class="hljs-number">0</span>].plot(t, y)<br>ax[<span class="hljs-number">0</span>].set_xlabel(<span class="hljs-string">&#x27;time [s]&#x27;</span>)<br>line_1 = ax[<span class="hljs-number">1</span>].plot(fft_y)<br>ax[<span class="hljs-number">1</span>].set_xlabel(<span class="hljs-string">&#x27;Frequency [Hz]&#x27;</span>)<br><br>mplcursors.<span class="hljs-keyword">cursor</span>(line_0, hover=<span class="hljs-keyword">False</span>, multiple=<span class="hljs-keyword">True</span>).<span class="hljs-keyword">connect</span>(&quot;add&quot;, lambda sel: sel.annotation.set_text(<br>    f&quot;x=&#123;sel.target[0]:.2f&#125;, y=&#123;sel.target[1]:.2f&#125;&quot;))<br>mplcursors.<span class="hljs-keyword">cursor</span>(line_1, hover=<span class="hljs-keyword">False</span>, multiple=<span class="hljs-keyword">True</span>).<span class="hljs-keyword">connect</span>(&quot;add&quot;, lambda sel: sel.annotation.set_text(<br>    f&quot;x=&#123;sel.target[0]:.2f&#125;, y=&#123;sel.target[1]:.2f&#125;&quot;))<br>plt.<span class="hljs-keyword">show</span>()<br></code></pre></td></tr></table></figure> <img src="\img\blog_order\Figure_1.png" srcset="/img/loading.gif" lazyload
-alt="FFT演示" /></p>
-<h1 id="阶次分析">阶次分析</h1>
-<p>阶次分析和频谱分析有完全不同的应用场景，阶次分析的好处是，一个转动系统，转速往往一直在变化，如果做频谱分析，我们会发现频谱会随转速变化，但是阶次分析与转速无关。频率分析适合系统中有固定频率存在的情况，而阶次分析适合系统中各部件互相耦合，转速一致变化的情况</p>
-<h2 id="基于时域采样的阶次分析">基于时域采样的阶次分析</h2>
-<p>假设基准频率固定为<em>F</em>Hz，转速为<em>S</em>rpm，易得： <span
-class="math display">\[
-F=\frac{S}{60}
-\]</span> 传统的频谱分析也是基于时域采样，所以，频谱到阶次谱只需要：
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment">#  fft_y不变</span><br><span class="hljs-attr">fft_x</span> = fft_x / F<br></code></pre></td></tr></table></figure> 这样，能够采集到的最大阶次为 <span class="math display">\[
-order_{max} =\frac{ F_{s}}{2* F}
-\]</span> 阶次分辨率为 <span class="math display">\[
-order_{n} =\frac{Fs}{N*F}
-\]</span>
-假设我们在对一个传动系统的振动做阶次分析，以输入轴转速为基准转速，转速大约在300rpm到1500rpm，传感器的采集频率为5.12kHz，采集时间为0.5s，那么，在300rpm时，我们能计算的阶次范围为0-5120阶，分辨率为0.6阶，在1500rpm时，阶次范围为0-1024阶，分辨率为0.08阶
-可以看出，当转速变化时，最大阶次和分辨率也会跟着变化，这样其实不利于分析和比较，而且时域采样的一个重要缺点是，无法处理频率随时间变化的非平稳信号，否则会有严重的拖尾效应，所以更多的阶次分析，会采用角度域采样而非时域采样</p>
-<p>非平稳信号的拖尾效应示例： <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs python">Fb = <span class="hljs-number">10</span><br>x = np.arange(<span class="hljs-number">0</span>, <span class="hljs-number">1024</span>)<br>t = x / Fb<br>data_len = <span class="hljs-number">1024</span><br>order_x = np.linspace(<span class="hljs-number">0</span>, <span class="hljs-built_in">int</span>(data_len / <span class="hljs-number">2</span> / Fb), <span class="hljs-built_in">int</span>(data_len / <span class="hljs-number">2</span>))<br>instantaneous_frequency = Fb + np.linspace(<span class="hljs-number">0</span>, <span class="hljs-number">20</span>, data_len )<br>y = np.sin(<span class="hljs-number">2</span> * np.pi * np.cumsum(instantaneous_frequency) / <span class="hljs-built_in">len</span>(t))<br>fft_y = np.fft.fft(y)<br>fft_y = (np.<span class="hljs-built_in">abs</span>(fft_y) / data_len)[<span class="hljs-built_in">range</span>(<span class="hljs-built_in">int</span>(data_len / <span class="hljs-number">2</span>))] * <span class="hljs-number">2</span><br>fft_y[<span class="hljs-number">0</span>] = fft_y[<span class="hljs-number">0</span>] / <span class="hljs-number">2</span><br>fig, ax = plt.subplots(<span class="hljs-number">3</span>, <span class="hljs-number">1</span>)<br>line_0 = ax[<span class="hljs-number">0</span>].plot(t, y)<br>ax[<span class="hljs-number">0</span>].set_xlabel(<span class="hljs-string">&#x27;Time [s]&#x27;</span>)<br>line_1 = ax[<span class="hljs-number">1</span>].plot(fft_y)<br>ax[<span class="hljs-number">1</span>].set_xlabel(<span class="hljs-string">&#x27;Frequency [Hz]&#x27;</span>)<br>line_2 = ax[<span class="hljs-number">2</span>].plot(order_x, fft_y)<br>ax[<span class="hljs-number">2</span>].set_xlabel(<span class="hljs-string">&#x27;Order&#x27;</span>)<br>mplcursors.cursor(line_0, hover=<span class="hljs-literal">False</span>, multiple=<span class="hljs-literal">True</span>).connect(<span class="hljs-string">&quot;add&quot;</span>, <span class="hljs-keyword">lambda</span> sel: sel.annotation.set_text(<br>    <span class="hljs-string">f&quot;x=<span class="hljs-subst">&#123;sel.target[<span class="hljs-number">0</span>]:<span class="hljs-number">.2</span>f&#125;</span>, y=<span class="hljs-subst">&#123;sel.target[<span class="hljs-number">1</span>]:<span class="hljs-number">.2</span>f&#125;</span>&quot;</span>))<br>mplcursors.cursor(line_1, hover=<span class="hljs-literal">False</span>, multiple=<span class="hljs-literal">True</span>).connect(<span class="hljs-string">&quot;add&quot;</span>, <span class="hljs-keyword">lambda</span> sel: sel.annotation.set_text(<br>    <span class="hljs-string">f&quot;x=<span class="hljs-subst">&#123;sel.target[<span class="hljs-number">0</span>]:<span class="hljs-number">.2</span>f&#125;</span>, y=<span class="hljs-subst">&#123;sel.target[<span class="hljs-number">1</span>]:<span class="hljs-number">.2</span>f&#125;</span>&quot;</span>))<br>mplcursors.cursor(line_2, hover=<span class="hljs-literal">False</span>, multiple=<span class="hljs-literal">True</span>).connect(<span class="hljs-string">&quot;add&quot;</span>, <span class="hljs-keyword">lambda</span> sel: sel.annotation.set_text(<br>    <span class="hljs-string">f&quot;x=<span class="hljs-subst">&#123;sel.target[<span class="hljs-number">0</span>]:<span class="hljs-number">.2</span>f&#125;</span>, y=<span class="hljs-subst">&#123;sel.target[<span class="hljs-number">1</span>]:<span class="hljs-number">.2</span>f&#125;</span>&quot;</span>))<br>plt.show()<br></code></pre></td></tr></table></figure> <img
-src="\img\blog_order\Figure_2.png" srcset="/img/loading.gif" lazyload alt="非平稳信号的分析示例" /></p>
-<h2 id="基于角度域采样的阶次分析">基于角度域采样的阶次分析</h2>
-<p>角度域采样的原理是，选择旋转部件，该部件旋转一周，等间隔采样N个点，此时N为角度域采样的采样频率，对角度域信号做FFT，可得到基于旋转部件转速的阶次谱</p>
-<h3 id="采样时间内转速无变化">采样时间内转速无变化</h3>
-<p>假设旋转部件的转动频率为F不变，转过一圈采样N个点，每采N×n做一次FFT，由于转速不变，可知时域采样率为F
-*
-N，FFT后的频谱，点数为N×n/2，最大频率为F*N/2，我们把频谱的横轴除以旋转部件的频率，得到阶次谱，阶次谱的最大阶次为Order<sub>max</sub>，谱线分辨率为Order<sub>n</sub>，可知：
-<span class="math display">\[
-order_{max} =\frac{ N}{2}
-\]</span> <span class="math display">\[
-order_{n} =\frac{order_{max} }{\frac{N×n}{2}}  =\frac{1}{n}
-\]</span>
-可以看到，相比于时域采样，角度域采样之后的阶次谱，最大阶次和阶次分辨率都与转速无关了，我们可以通过增大采样率N来扩大阶次谱范围，通过增大采样次数n来减小分辨率，提升精度
-<img src="\img\blog_order\Figure_3.png" srcset="/img/loading.gif" lazyload alt="角度域采样举例" /></p>
-<h3 id="采样时间内转速变化">采样时间内转速变化</h3>
-<p>我的理解：阶次分析时需要把FFT后的频率轴转为阶次轴，也就是除以转频F，那么这里转频需要是一个固定的量，目前看到的处理方法基本为求采样时间内转速的平均值，作为该段时间的转速。如果在采样时间内转速变化很大，那么会导致求取阶次时误差也比较大</p>
-<p>对于角度域采样，有<em>硬件</em>和<em>软件</em>两种处理方式，硬件处理是每转过恒定角度时触发采样，得到的原始数据就是角度域数据（但是不知道这种方法是否方便切换采样率）；软件处理指先采集时域信号，上位机端结合转速信号对时域信号进行基于角度域的重采样，这种做法好处是采样率很好控制，坏处是软件端的工作量会比较大</p>
+                <p>这次逛展和去年相比，最大的变化是自己的知识面更宽了，所以参观的时候更有针对性，能聊的也更多。简单总结一下看到的企业和产品吧</p>
+<h2 id="冠标">冠标</h2>
+<p>这家公司是一个国外传感器公司ENDEVCO的代理，传感器的种类很多，他们专门介绍了一个距离传感器，精确度是微秒级的，而且有数字量通信，还有带数显的液压传感器，感觉很酷
+<img src="\img\blog_testexpo\Fig_1.jpg" srcset="/img/loading.gif" lazyload /> <img
+src="\img\blog_testexpo\Fig_2.jpg" srcset="/img/loading.gif" lazyload /></p>
+<h2 id="横河">横河</h2>
+<p>主要看了一个示波器，这个示波器有一个很神奇的功能，就是能解析特定协议的波形，比如CAN，串口，SPI，IIC等，然后体积贼大，价格也不便宜，我们还有看到一个国产品牌的示波器也做了这个功能，而且更轻薄一些，但是其实感觉这个功能也有点鸡肋，平时不太用得上
+<img src="\img\blog_testexpo\Fig_3.jpg" srcset="/img/loading.gif" lazyload /></p>
+<h2 id="humanetics">Humanetics</h2>
+<p>我去年也看到这家公司了，但是没看懂是干什么的，今年终于看懂了，原来就是做测试的，感觉很棒，产品很成熟
+<img src="\img\blog_testexpo\Fig_5.jpg" srcset="/img/loading.gif" lazyload /> <img
+src="\img\blog_testexpo\Fig_6.jpg" srcset="/img/loading.gif" lazyload /></p>
+<h2 id="上海瑞起">上海瑞起</h2>
+<p>碰到好多个做环境仓温箱的，但是这个印象很深，因为这家专门做阳光模拟的，我之前都没见到过，甚至不知道有这项测试
+<img src="\img\blog_testexpo\Fig_7.jpg" srcset="/img/loading.gif" lazyload /></p>
+<h2 id="利恩斯">利恩斯</h2>
+<p>主要看了他们的传感器，他们推荐的就是IEPE类型的，但是低温只能到-50度左右，但是也推荐了另一种冲击传感器，专门用于碰撞试验的，可承受温度更低些
+和传感器厂商交流时我发现，他们都更关注传感器在高温时的表现，低温环境好像用得不多，除非是一些特定的低温情况，而且他们也说，由于IEPE型传感器内部集成了电路，所以低温时是会有影响的，他们也推荐了另外一种传感器，是把电路部分集成到低温环境外的，这样在低温下可以正常使用，这个我忘记拍照了
+<img src="\img\blog_testexpo\Fig_9.jpg" srcset="/img/loading.gif" lazyload /></p>
+<h2 id="盈蓓德">盈蓓德</h2>
+<p>这家故障诊断设备感觉完成度很高，而且功能和原理也和delta的基本一致，我看他们还展出了一些检测出故障的设备，应该已经有很长时间的验证了
+<img src="\img\blog_testexpo\Fig_10.jpg" srcset="/img/loading.gif" lazyload /> <img
+src="\img\blog_testexpo\Fig_11.jpg" srcset="/img/loading.gif" lazyload /></p>
+<h2 id="杭州爱测">杭州爱测</h2>
+<p>这家其实和delta的不太一样，我和他们聊了一下，发现他们的自学习是要取很多良品进行学习的，好像不是测试设备的检测，而是成品的，而且他们除了针对加速度数据的处理，还有声音数据的</p>
+<p>我也发现有很多企业在做光学、声学相关了，有好几个公司展出了声学照相机，可以自己选择感兴趣的频段，然后锁定声音源，在做一些管道诊断还有异响定位的时候挺有用的
+<img src="\img\blog_testexpo\Fig_12.jpg" srcset="/img/loading.gif" lazyload /></p>
+<p>其实还逛了很多展台，被塞了超多小册子，但是这几个是让我印象比较深的，希望下次参展的时候自己能有更多进步</p>
 
                 
               </div>
@@ -334,15 +325,6 @@ order_{n} =\frac{order_{max} }{\frac{N×n}{2}}  =\frac{1}{n}
               <div class="post-metas my-3">
   
   
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/FFT/" class="print-no-link">#FFT</a>
-      
-        <a href="/tags/Python/" class="print-no-link">#Python</a>
-      
-    </div>
-  
 </div>
 
 
@@ -351,8 +333,8 @@ order_{n} =\frac{order_{max} }{\frac{N×n}{2}}  =\frac{1}{n}
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>对阶次分析的一些理解</div>
-      <div>http://example.com/2024/08/30/understanding-of-order-analysis/</div>
+      <div>上海 test expo 观展记录</div>
+      <div>http://example.com/2024/09/01/2024/</div>
     </div>
     <div class="license-meta">
       
@@ -364,7 +346,7 @@ order_{n} =\frac{order_{max} }{\frac{N×n}{2}}  =\frac{1}{n}
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年8月30日</div>
+          <div>2024年9月1日</div>
         </div>
       
       
@@ -396,18 +378,12 @@ order_{n} =\frac{order_{max} }{\frac{N×n}{2}}  =\frac{1}{n}
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/09/01/2024/" title="上海 test expo 观展记录">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">上海 test expo 观展记录</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/08/21/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2024/08/30/understanding-of-order-analysis/" title="对阶次分析的一些理解">
+                        <span class="hidden-mobile">对阶次分析的一些理解</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
