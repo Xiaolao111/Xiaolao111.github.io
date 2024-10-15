@@ -19,32 +19,27 @@
   <meta name="author" content="xiaolao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="金秋九月，天气真的很好。上周末刮了一天的台风，我和满宝在家打扫卫生和练习拍照，这周的时候已经有很多好看的照片了。 这周末过得很充实，我们去了想去打卡的地方拍照，去了想吃的饭店，修理了家里的东西，还有好多  这张是baby+台风登陆苏州时，我拍的楼下小操场，这个操场白天爬满了小孩，晚上的灯光又很好看  早上的时候，操场就是这样，明亮亮地也很阳光  中秋的月，这个月没有第二天的大">
+    <meta name="description" content="有时候我们用树莓派的时候忘记带屏幕，或者外接鼠标键盘不方便，就可以考虑用远程桌面的方式控制树莓派，下面介绍一下方法 基础配置：树莓派已烧录系统、已开启VNC 我的树莓派已经联网了，但是重新开机之后，我输入之前的ip链接远程，发现连不上，可能是重新开机后wifi没能连上，或者ip变了，这个时候可以换一种方法，就是用网线链接树莓派和电脑，来获取ip 1、网线连接 vnc需要远程和被远程的设备都">
 <meta property="og:type" content="article">
-<meta property="og:title" content="week9_22">
-<meta property="og:url" content="http://example.com/2024/09/22/week9-22/index.html">
+<meta property="og:title" content="树莓派——远程桌面">
+<meta property="og:url" content="http://example.com/2024/10/15/%E6%A0%91%E8%8E%93%E6%B4%BE%E2%80%94%E2%80%94%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/index.html">
 <meta property="og:site_name" content="xiaolao&#39;s blog">
-<meta property="og:description" content="金秋九月，天气真的很好。上周末刮了一天的台风，我和满宝在家打扫卫生和练习拍照，这周的时候已经有很多好看的照片了。 这周末过得很充实，我们去了想去打卡的地方拍照，去了想吃的饭店，修理了家里的东西，还有好多  这张是baby+台风登陆苏州时，我拍的楼下小操场，这个操场白天爬满了小孩，晚上的灯光又很好看  早上的时候，操场就是这样，明亮亮地也很阳光  中秋的月，这个月没有第二天的大">
+<meta property="og:description" content="有时候我们用树莓派的时候忘记带屏幕，或者外接鼠标键盘不方便，就可以考虑用远程桌面的方式控制树莓派，下面介绍一下方法 基础配置：树莓派已烧录系统、已开启VNC 我的树莓派已经联网了，但是重新开机之后，我输入之前的ip链接远程，发现连不上，可能是重新开机后wifi没能连上，或者ip变了，这个时候可以换一种方法，就是用网线链接树莓派和电脑，来获取ip 1、网线连接 vnc需要远程和被远程的设备都">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/img/blog_week9_22/DSC_0218.JPG">
-<meta property="og:image" content="http://example.com/img/blog_week9_22/DSC_0272.JPG">
-<meta property="og:image" content="http://example.com/img/blog_week9_22/DSC_0428.JPG">
-<meta property="og:image" content="http://example.com/img/blog_week9_22/DSC_0478.JPG">
-<meta property="og:image" content="http://example.com/img/blog_week9_22/DSC_0509.JPG">
-<meta property="og:image" content="http://example.com/img/blog_week9_22/DSC_0574.JPG">
-<meta property="og:image" content="http://example.com/img/blog_week9_22/DSC_0610.JPG">
-<meta property="og:image" content="http://example.com/img/blog_week9_22/DSC_0614.JPG">
-<meta property="og:image" content="http://example.com/img/blog_week9_22/DSC_0644.JPG">
-<meta property="og:image" content="http://example.com/img/blog_week9_22/DSC_0675.JPG">
-<meta property="article:published_time" content="2024-09-22T14:32:40.000Z">
-<meta property="article:modified_time" content="2024-09-22T15:51:29.153Z">
+<meta property="og:image" content="http://example.com/img/blog_raspberry_remote_control/1.png">
+<meta property="og:image" content="http://example.com/img/blog_raspberry_remote_control/4.png">
+<meta property="og:image" content="http://example.com/img/blog_raspberry_remote_control/6.png">
+<meta property="article:published_time" content="2024-10-15T07:51:18.000Z">
+<meta property="article:modified_time" content="2024-10-15T08:04:57.713Z">
 <meta property="article:author" content="xiaolao">
+<meta property="article:tag" content="Raspberry Pi 4B">
+<meta property="article:tag" content="RealVNC">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://example.com/img/blog_week9_22/DSC_0218.JPG">
+<meta name="twitter:image" content="http://example.com/img/blog_raspberry_remote_control/1.png">
   
   
   
-  <title>week9_22 - xiaolao&#39;s blog</title>
+  <title>树莓派——远程桌面 - xiaolao&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -210,7 +205,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="week9_22"></span>
+            <span id="subtitle" data-typed-text="树莓派——远程桌面"></span>
           
         </div>
 
@@ -226,8 +221,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-22 22:32" pubdate>
-          2024年9月22日 晚上
+        <time datetime="2024-10-15 15:51" pubdate>
+          2024年10月15日 下午
         </time>
       </span>
     
@@ -238,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          380 字
+          372 字
         
       </span>
     
@@ -286,33 +281,29 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">week9_22</h1>
+            <h1 id="seo-header">树莓派——远程桌面</h1>
             
             
               <div class="markdown-body">
                 
-                <p>金秋九月，天气真的很好。上周末刮了一天的台风，我和满宝在家打扫卫生和练习拍照，这周的时候已经有很多好看的照片了。</p>
-<p>这周末过得很充实，我们去了想去打卡的地方拍照，去了想吃的饭店，修理了家里的东西，还有好多</p>
-<p><img src="\img\blog_week9_22\DSC_0218.JPG" srcset="/img/loading.gif" lazyload />
-这张是baby+台风登陆苏州时，我拍的楼下小操场，这个操场白天爬满了小孩，晚上的灯光又很好看</p>
-<p><img src="\img\blog_week9_22\DSC_0272.JPG" srcset="/img/loading.gif" lazyload />
-早上的时候，操场就是这样，明亮亮地也很阳光</p>
-<p><img src="\img\blog_week9_22\DSC_0428.JPG" srcset="/img/loading.gif" lazyload />
-中秋的月，这个月没有第二天的大</p>
-<p><img src="\img\blog_week9_22\DSC_0478.JPG" srcset="/img/loading.gif" lazyload />
-周末刮了大风，我们去螺蛳湾，说好是小众景点，去的时候发现人满为患，大家都把车停在防汛车道上了。我们在草丛里拍到这个白色的小蘑菇</p>
-<p><img src="\img\blog_week9_22\DSC_0509.JPG" srcset="/img/loading.gif" lazyload /> <img
-src="\img\blog_week9_22\DSC_0527.JPG" srcset="/img/loading.gif" lazyload />
-搁浅的大船！那天天气是阴阴的</p>
-<p><img src="\img\blog_week9_22\DSC_0574.JPG" srcset="/img/loading.gif" lazyload /> 耶，天气超好的一天</p>
-<p><img src="\img\blog_week9_22\DSC_0610.JPG" srcset="/img/loading.gif" lazyload />
-去了一家台湾小吃店叫可可西里，老板娘是台湾人，点了台湾特色卤肉饭，味道和做法都和我之前吃的不一样，超好吃</p>
-<p><img src="\img\blog_week9_22\DSC_0614.JPG" srcset="/img/loading.gif" lazyload />
-同伴的沙茶酱牛肉面，也很好吃</p>
-<p><img src="\img\blog_week9_22\DSC_0644.JPG" srcset="/img/loading.gif" lazyload />
-全世界最可爱的小猫咪</p>
-<p><img src="\img\blog_week9_22\DSC_0675.JPG" srcset="/img/loading.gif" lazyload />
-买了一瓶清酒，正好配我在小地瓜上买的盲盒杯子，这个酒味道确实有米香，我喝过的酒其实很少，最近买的一大瓶龙舌兰我觉得太辣了，但是这个清酒确实挺好喝</p>
+                <p>有时候我们用树莓派的时候忘记带屏幕，或者外接鼠标键盘不方便，就可以考虑用远程桌面的方式控制树莓派，下面介绍一下方法</p>
+<p><strong>基础配置</strong>：树莓派已烧录系统、已开启VNC</p>
+<p>我的树莓派已经联网了，但是重新开机之后，我输入之前的ip链接远程，发现连不上，可能是重新开机后wifi没能连上，或者ip变了，这个时候可以换一种方法，就是用网线链接树莓派和电脑，来获取ip</p>
+<h2 id="网线连接">1、网线连接</h2>
+<p>vnc需要远程和被远程的设备都接入网络，所以需要打开wlan的共享（此时我的树莓派通过以太网4接入电脑）
+<img src="\img\blog_raspberry_remote_control\1.png" srcset="/img/loading.gif" lazyload /> 打开cmd，输入arp
+-a，查看以太网4中的IP，即192.168.137.1 <img
+src="\img\blog_raspberry_remote_control\2.png" srcset="/img/loading.gif" lazyload /> 在cmd中输入arp
+-a，查看与我们电脑处于同一网段下的其他设备IP <img
+src="\img\blog_raspberry_remote_control\3.png" srcset="/img/loading.gif" lazyload />
+应该就是192.168.137.233了</p>
+<p>下载一个VNC软件（我用的是RealVNC），输入IP后回车，会出现账号认证的窗口，在这里输入登录树莓派的用户名和密码
+<img src="\img\blog_raspberry_remote_control\4.png" srcset="/img/loading.gif" lazyload /> 搞定！ <img
+src="\img\blog_raspberry_remote_control\5.png" srcset="/img/loading.gif" lazyload /></p>
+<h2 id="wifi连接">2、wifi连接</h2>
+<p>如果是在树莓派已经接入wifi的情况下，把鼠标放在树莓派右上角的数据标志上，就可以看到在wifi局域网内的IP了
+<img src="\img\blog_raspberry_remote_control\6.png" srcset="/img/loading.gif" lazyload />
+这个时候关闭远程，再输入172的这个IP，我们发现也可以连上远程</p>
 
                 
               </div>
@@ -322,6 +313,15 @@ src="\img\blog_week9_22\DSC_0527.JPG" srcset="/img/loading.gif" lazyload />
               <div class="post-metas my-3">
   
   
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Raspberry-Pi-4B/" class="print-no-link">#Raspberry Pi 4B</a>
+      
+        <a href="/tags/RealVNC/" class="print-no-link">#RealVNC</a>
+      
+    </div>
+  
 </div>
 
 
@@ -330,8 +330,8 @@ src="\img\blog_week9_22\DSC_0527.JPG" srcset="/img/loading.gif" lazyload />
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>week9_22</div>
-      <div>http://example.com/2024/09/22/week9-22/</div>
+      <div>树莓派——远程桌面</div>
+      <div>http://example.com/2024/10/15/树莓派——远程桌面/</div>
     </div>
     <div class="license-meta">
       
@@ -343,7 +343,7 @@ src="\img\blog_week9_22\DSC_0527.JPG" srcset="/img/loading.gif" lazyload />
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年9月22日</div>
+          <div>2024年10月15日</div>
         </div>
       
       
@@ -375,18 +375,12 @@ src="\img\blog_week9_22\DSC_0527.JPG" srcset="/img/loading.gif" lazyload />
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/10/15/%E6%A0%91%E8%8E%93%E6%B4%BE%E2%80%94%E2%80%94%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/" title="树莓派——远程桌面">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">树莓派——远程桌面</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/09/01/2024/" title="上海 test expo 观展记录">
-                        <span class="hidden-mobile">上海 test expo 观展记录</span>
+                      <a href="/2024/09/22/week9-22/" title="week9_22">
+                        <span class="hidden-mobile">week9_22</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

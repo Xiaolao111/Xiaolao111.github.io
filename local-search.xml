@@ -4,6 +4,27 @@
   
   
   <entry>
+    <title>树莓派——远程桌面</title>
+    <link href="/2024/10/15/%E6%A0%91%E8%8E%93%E6%B4%BE%E2%80%94%E2%80%94%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/"/>
+    <url>/2024/10/15/%E6%A0%91%E8%8E%93%E6%B4%BE%E2%80%94%E2%80%94%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2/</url>
+    
+    <content type="html"><![CDATA[<p>有时候我们用树莓派的时候忘记带屏幕，或者外接鼠标键盘不方便，就可以考虑用远程桌面的方式控制树莓派，下面介绍一下方法</p><p><strong>基础配置</strong>：树莓派已烧录系统、已开启VNC</p><p>我的树莓派已经联网了，但是重新开机之后，我输入之前的ip链接远程，发现连不上，可能是重新开机后wifi没能连上，或者ip变了，这个时候可以换一种方法，就是用网线链接树莓派和电脑，来获取ip</p><h2 id="网线连接">1、网线连接</h2><p>vnc需要远程和被远程的设备都接入网络，所以需要打开wlan的共享（此时我的树莓派通过以太网4接入电脑）<img src="\img\blog_raspberry_remote_control\1.png" /> 打开cmd，输入arp-a，查看以太网4中的IP，即192.168.137.1 <imgsrc="\img\blog_raspberry_remote_control\2.png" /> 在cmd中输入arp-a，查看与我们电脑处于同一网段下的其他设备IP <imgsrc="\img\blog_raspberry_remote_control\3.png" />应该就是192.168.137.233了</p><p>下载一个VNC软件（我用的是RealVNC），输入IP后回车，会出现账号认证的窗口，在这里输入登录树莓派的用户名和密码<img src="\img\blog_raspberry_remote_control\4.png" /> 搞定！ <imgsrc="\img\blog_raspberry_remote_control\5.png" /></p><h2 id="wifi连接">2、wifi连接</h2><p>如果是在树莓派已经接入wifi的情况下，把鼠标放在树莓派右上角的数据标志上，就可以看到在wifi局域网内的IP了<img src="\img\blog_raspberry_remote_control\6.png" />这个时候关闭远程，再输入172的这个IP，我们发现也可以连上远程</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Raspberry Pi 4B</tag>
+      
+      <tag>RealVNC</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>week9_22</title>
     <link href="/2024/09/22/week9-22/"/>
     <url>/2024/09/22/week9-22/</url>
